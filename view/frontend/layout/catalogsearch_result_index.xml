@@ -1,0 +1,9 @@
+<?xml version='1.0'?>
+<page
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
+>
+<!-- 2020-09-08
+"Remove the «Related search terms» block from the `/catalogsearch/result` page": https://github.com/dxmoto/core/issues/4 -->
+	<body><referenceBlock name='search_recommendations' remove='true'/></body>
+</page>

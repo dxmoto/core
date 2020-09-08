@@ -1,7 +1,7 @@
 <?php
 namespace DxMoto\Core\Plugin\ImportExport\Logger;
 use Firebear\ImportExport\Logger\Logger as Sb;
-# 2020-09-08 "Prevent `Firebear_ImportExport` from logging non-error messages": https://github.com/dxmoto/site/issues/49
+# 2020-09-08 "Prevent `Firebear_ImportExport` from logging non-error messages": https://github.com/dxmoto/core/issues/2
 final class Logger {
 	/**
 	 * 2020-09-08

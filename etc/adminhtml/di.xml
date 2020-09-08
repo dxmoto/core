@@ -3,7 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd"
 >
-<!-- 2020-09-08 "Prevent `Firebear_ImportExport` from logging non-error messages": https://github.com/dxmoto/site/issues/49 -->
+<!-- 2020-09-08 "Prevent `Firebear_ImportExport` from logging non-error messages": https://github.com/dxmoto/core/issues/2 -->
 	<type name='Firebear\ImportExport\Logger\Logger'>
 		<plugin name='DxMoto\Core\Plugin\ImportExport\Logger\Logger' type='DxMoto\Core\Plugin\ImportExport\Logger\Logger' />
 	</type>

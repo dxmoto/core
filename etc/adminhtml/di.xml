@@ -3,8 +3,18 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd"
 >
+<!-- 2020-09-08
+"`Firebear_ImportExport`:
+«Notice: Undefined offset: 459 in /vendor/firebear/importexport/Model/Export/Category.php on line 366»
+on exporting categories": https://github.com/dxmoto/core/issues/3 -->
+	<preference
+		for='Firebear\ImportExport\Model\Export\Category' type='DxMoto\Core\Firebear\ImportExport\Model\Export\Category'
+	/>
 <!-- 2020-09-08 "Prevent `Firebear_ImportExport` from logging non-error messages": https://github.com/dxmoto/core/issues/2 -->
 	<type name='Firebear\ImportExport\Logger\Logger'>
-		<plugin name='DxMoto\Core\Plugin\ImportExport\Logger\Logger' type='DxMoto\Core\Plugin\ImportExport\Logger\Logger' />
+		<plugin
+			name='DxMoto\Core\Plugin\Firebear\ImportExport\Logger\Logger'
+			type='DxMoto\Core\Plugin\Firebear\ImportExport\Logger\Logger'
+		/>
 	</type>
 </config>

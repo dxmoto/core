@@ -1,0 +1,27 @@
+<?xml version='1.0'?>
+<config
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:noNamespaceSchemaLocation='urn:magento:framework:ObjectManager/etc/config.xsd'
+>
+<!-- 2020-09-08
+1) `Ess_M2ePro`: «Argument 3 passed to Magento\Cms\Model\Wysiwyg\CompositeConfigProvider::__construct()
+must be of the type array, null given»: https://github.com/dxmoto/core/issues/6
+2) The solution: https://magento.stackexchange.com/a/258216
+3) I have copied it from https://github.com/magento/magento2/blob/2.3.5-p1/app/code/Magento/Cms/etc/adminhtml/di.xml#L20-L35 -->
+	<type name='Magento\Cms\Model\Wysiwyg\CompositeConfigProvider'>
+		<arguments>
+			<argument name='variablePluginConfigProvider' xsi:type='array'>
+				<item name='default' xsi:type='string'>Magento\Variable\Model\Variable\ConfigProvider</item>
+			</argument>
+			<argument name='widgetPluginConfigProvider' xsi:type='array'>
+				<item name='default' xsi:type='string'>Magento\Widget\Model\Widget\Config</item>
+			</argument>
+			<argument name='wysiwygConfigPostProcessor' xsi:type='array'>
+				<item name='default' xsi:type='string'>Magento\Cms\Model\Wysiwyg\DefaultConfigProvider</item>
+			</argument>
+			<argument name='galleryConfigProvider' xsi:type='array'>
+				<item name='default' xsi:type='string'>Magento\Cms\Model\Wysiwyg\Gallery\DefaultConfigProvider</item>
+			</argument>
+		</arguments>
+	</type>
+</config>

@@ -3,6 +3,15 @@
 	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
 	xsi:noNamespaceSchemaLocation='urn:magento:framework:ObjectManager/etc/config.xsd'
 >
+<!-- 2020-09-12
+"`Ess_M2ePro`: «Broken reference: the 'amasty.finder.5' element cannot be added as child to 'content',
+because the latter doesn't exist»": https://github.com/dxmoto/core/issues/7 -->
+	<type name='Amasty\Finder\Observer\LayoutRender'>
+		<plugin
+			name='DxMoto\Core\Plugin\Amasty\Finder\Observer\LayoutRender'
+			type='DxMoto\Core\Plugin\Amasty\Finder\Observer\LayoutRender'
+		/>
+	</type>
 <!-- 2020-09-08
 1) `Ess_M2ePro`: «Argument 3 passed to Magento\Cms\Model\Wysiwyg\CompositeConfigProvider::__construct()
 must be of the type array, null given»: https://github.com/dxmoto/core/issues/6

@@ -1,0 +1,16 @@
+<?xml version='1.0'?>
+<page
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
+>
+	<body>
+<!-- 2020-09-16
+1) «Broken reference: the 'sidebar.container' element cannot be added as child to 'sidebar.main',
+because the latter doesn't exist»: https://github.com/dxmoto/site/issues/66
+2) https://github.com/magento/data-migration-tool/issues/452#issuecomment-436822971
+3) We can not fix it in the vendor/mage2pro/core/Theme/view/frontend/page_layout/1column.xml because of
+https://github.com/mage2pro/core/blob/6.9.1/Theme/view/frontend/page_layout/1column.xml#L10-L17 -->
+		<container name='sidebar.main'/>
+		<referenceContainer name='sidebar.main' remove='true'/>
+	</body>
+</page>

@@ -1,6 +1,6 @@
 {
 	"name": "dxmoto/core"
-	,"version": "0.0.8"
+	,"version": "0.0.9"
 	,"description": "A custom module for dxmoto.com (Magento 2)"
 	,"type": "magento2-module"
 	,"homepage": "https://github.com/dxmoto/core"
@@ -11,7 +11,7 @@
 		,"homepage": "https://mage2.pro/users/dmitry_fedyuk"
 		,"role": "Developer"
 	}]
-	,"require": {"mage2pro/core": ">=6.8.8"}
+	,"require": {"mage2pro/core": ">=6.9.1"}
 	,"autoload": {"files": ["registration.php"], "psr-4": {"DxMoto\\Core\\": ""}}
 	,"keywords": ["Magento 2"]
 }

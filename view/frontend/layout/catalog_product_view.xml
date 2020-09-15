@@ -12,5 +12,10 @@ because the latter doesn't exist»: https://github.com/dxmoto/site/issues/66
 https://github.com/mage2pro/core/blob/6.9.1/Theme/view/frontend/page_layout/1column.xml#L10-L17 -->
 		<container name='sidebar.main'/>
 		<referenceContainer name='sidebar.main' remove='true'/>
+<!-- 2020-09-16
+1) "Intermediate breadcrumbs are missing on frontend product pages in Magento 2.3.5": https://github.com/dxmoto/core/issues/8
+2) https://magento.stackexchange.com/a/250676 -->
+		<referenceBlock name='breadcrumbs' template='Magento_Theme::html/breadcrumbs.phtml' />
+		<block class='Magento\Catalog\Block\Breadcrumbs'/>
 	</body>
 </page>

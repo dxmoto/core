@@ -1,0 +1,10 @@
+<?xml version='1.0'?>
+<config
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:noNamespaceSchemaLocation='urn:magento:framework:Event/etc/events.xsd'
+>
+<!-- 2020-10-04
+`KJ_MageMail`: «Not going to ping API because order confirmation email isn't enabled»:
+https://github.com/dxmoto/site/issues/115 -->
+	<event name='df_can_log'><observer instance='DxMoto\Core\Observer\CanLog' name='DxMoto\Core\Observer\CanLog'/></event>
+</config>

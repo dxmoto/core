@@ -15,11 +15,14 @@ use Magento\Framework\Event\Observer as O;
 final class LayoutRender {
 	/**
 	 * 2020-09-12
+	 * 2020-10-04
+	 * The 'amfinder' prefix fixes the issue: "`Amasty_Finder` does not filter results properly".
+	 * https://github.com/dxmoto/site/issues/118
 	 * @see \Amasty\Finder\Observer\LayoutRender::execute()
 	 * @param Sb $sb
 	 * @param \Closure $f
 	 * @param O $o
 	 * @return O
 	 */
-	function aroundExecute(Sb $sb, \Closure $f, O $o) {return df_action_prefix('catalog') ? $f($o) : $o;}
+	function aroundExecute(Sb $sb, \Closure $f, O $o) {return df_action_prefix(['amfinder', 'catalog']) ? $f($o) : $o;}
 }

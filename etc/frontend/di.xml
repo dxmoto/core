@@ -3,6 +3,12 @@
 	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
 	xsi:noNamespaceSchemaLocation='urn:magento:framework:ObjectManager/etc/config.xsd'
 >
+<!-- 2020-10-06
+"`Amasty_Finder` 1.11.4: the filtering block is shown at the bottom instead of the top on the results page":
+https://github.com/dxmoto/site/issues/124 -->
+	<type name='Amasty\Finder\Model\Finder'>
+		<plugin name='DxMoto\Core\Plugin\Amasty\Finder\Model\Finder' type='DxMoto\Core\Plugin\Amasty\Finder\Model\Finder'/>
+	</type>
 <!-- 2020-09-12
 "`Ess_M2ePro`: «Broken reference: the 'amasty.finder.5' element cannot be added as child to 'content',
 because the latter doesn't exist»": https://github.com/dxmoto/core/issues/7 -->

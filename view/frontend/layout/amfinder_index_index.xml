@@ -3,11 +3,11 @@
 	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
 	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
 >
+<!-- 2020-10-06 
+"`Amasty_Finder`: the results page shows the «Default Category» title": https://github.com/dxmoto/site/issues/121 -->	
 	<referenceBlock name='page.main.title'>
-<!-- 2020-10-06
-"`Amasty_Finder`: the results page shows the «Default Category» title": https://github.com/dxmoto/site/issues/121 -->
 		<action method='setPageTitle'>
 			<argument name='title' translate='true' xsi:type='string'>Search Results</argument>
 		</action>
-	</referenceBlock>	
+	</referenceBlock>
 </page>
